@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#edf5ff">
+  <meta name="description" content="Fiso Bazar BD — a modern marketplace.">
+  <title>Fiso Bazar BD</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="ambient ambient-one"></div><div class="ambient ambient-two"></div>
+  <header class="topbar glass">
+    <a class="brand" href="#" aria-label="Fiso Bazar BD home"><span class="brand-mark">F</span><span>Fiso <b>Bazar BD</b></span></a>
+    <form id="search-form" class="search"><span aria-hidden="true">⌕</span><input id="search-input" type="search" placeholder="Search products…" aria-label="Search products"><button type="submit">Search</button></form>
+    <div class="top-actions"><button class="icon-button" id="account-button" aria-label="Account">♙</button><button class="icon-button cart-trigger" id="cart-button" aria-label="Shopping cart">♧<span id="cart-count" class="count">0</span></button></div>
+  </header>
+
+  <main>
+    <section class="hero glass">
+      <div class="hero-copy"><span class="eyebrow">A little joy, delivered</span><h1>Find your next<br><span>favorite thing.</span></h1><p>Good finds, lovely prices, and a smoother way to shop.</p><a class="primary-button" href="#products">Explore the bazar <span>↗</span></a></div>
+      <div class="hero-art" aria-hidden="true"><div class="orb orb-back"></div><div class="orb orb-front"></div><div class="hero-chip chip-one">✦ Fresh finds</div><div class="hero-chip chip-two">♡ Made for you</div><div class="hero-spark">✳</div></div>
+    </section>
+
+    <section class="category-strip" aria-label="Product categories">
+      <button class="category active" data-category="All">✧ <span>All finds</span></button>
+      <button class="category" data-category="Electronics">⌁ <span>Electronics</span></button>
+      <button class="category" data-category="Fashion">◌ <span>Fashion</span></button>
+      <button class="category" data-category="Home">⌂ <span>Home</span></button>
+      <button class="category" data-category="Beauty">✿ <span>Beauty</span></button>
+    </section>
+
+    <section class="section-head" id="products"><div><span class="eyebrow">Handpicked for today</span><h2>Explore the bazar</h2></div><span id="result-count" class="muted">Showing all products</span></section>
+    <div id="product-grid" class="product-grid" aria-live="polite"></div>
+    <div id="empty-state" class="empty glass hidden"><span>✧</span><h3>No products found</h3><p>Try another search or category.</p><button class="secondary-button" id="clear-filters">Clear filters</button></div>
+  </main>
+
+  <footer class="footer"><span>© 2026 Fiso Bazar BD</span><span>Thoughtfully found. Simply shopped.</span></footer>
+
+  <nav class="bottom-nav glass" aria-label="Main navigation">
+    <button class="nav-item selected" data-nav="home"><span>⌂</span><small>Home</small></button>
+    <button class="nav-item" data-nav="search"><span>⌕</span><small>Search</small></button>
+    <button class="nav-item add-nav" id="seller-plus" aria-label="Seller post product"><span>＋</span></button>
+    <button class="nav-item" data-nav="cart"><span>♧</span><small>Cart</small></button>
+    <button class="nav-item" data-nav="account"><span>♙</span><small>Account</small></button>
+  </nav>
+
+  <button id="whatsapp-button" class="whatsapp" aria-label="Contact us on WhatsApp">◉ <span>Chat with us</span></button>
+
+  <div id="modal-backdrop" class="modal-backdrop hidden">
+    <section id="modal" class="modal glass" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+      <button id="modal-close" class="modal-close" aria-label="Close">×</button><div id="modal-content"></div>
+    </section>
+  </div>
+  <div id="toast" class="toast" role="status"></div>
+  <script src="app.js"></script>
+</body>
+</html>
